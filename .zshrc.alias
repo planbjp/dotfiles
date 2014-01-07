@@ -1,5 +1,6 @@
 ## aliases
 #
+alias vi='vim'
 alias ll="ls -lap"
 alias wll="watch -n 0.5 'ls -lap'"
 alias history="fc -l 1"
