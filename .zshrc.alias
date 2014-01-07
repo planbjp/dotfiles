@@ -1,0 +1,23 @@
+## aliases
+#
+alias ll="ls -lap"
+alias wll="watch -n 0.5 'ls -lap'"
+alias history="fc -l 1"
+
+
+## functions
+#
+gconf ()
+{
+    grep -v -e "^$" -e "^#" $1
+}
+
+wargs ()
+{
+    watch -n 0.5 "$1"
+}
+
+cpbk ()
+{
+    cp -Rpv $1 $1.`date +%Y%m%d_%H%M%S`
+}
