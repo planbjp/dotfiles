@@ -41,6 +41,7 @@ setopt list_types
 #setopt numeric_glob_sort
 setopt correct
 #setopt interactive_comments
+setopt nonomatch
 
 #enable zmv
 autoload -Uz zmv
