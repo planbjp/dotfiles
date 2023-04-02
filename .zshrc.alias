@@ -18,7 +18,23 @@ wargs ()
     watch -n 0.5 "$1"
 }
 
+abspath()
+{
+    src=${1%/}
+    case $1 in /*) ;; *) src=`pwd`/${src};; esac
+    echo $src
+}
+
 cpbk ()
 {
-    cp -Rpv $1 $1.`date +%Y%m%d_%H%M%S`
+    src=$(abspath $1)
+    dst=${src}.`date +%Y%m%d_%H%M%S`
+    cp -Rpv $src $dst
+}
+
+mvbk ()
+{
+    src=$(abspath $1)
+    dst=${src}.`date +%Y%m%d_%H%M%S`
+    mv $src $dst
 }
