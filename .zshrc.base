@@ -77,7 +77,7 @@ setopt share_history
 setopt hist_reduce_blanks
 setopt extended_history
 #setopt hist_verify
-setopt hist_no_store
+#setopt hist_no_store
 
 
 ## keybindings
